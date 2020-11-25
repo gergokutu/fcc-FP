@@ -127,7 +127,10 @@ const watchList = [
 // });
 
 // Ver2
-// const ratings = watchList.map(movie => ({ title: movie.Title, rating: movie.imdbRating }));
+// const ratings = watchList.map(movie => ({
+//   title: movie.Title,
+//   rating: movie.imdbRating
+// }));
 
 // Ver3
 // const ratings = watchList.map(({ Title, imdbRating }) => ({ title: Title, rating: imdbRating }));
