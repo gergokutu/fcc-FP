@@ -40,4 +40,4 @@ Array.prototype.myMap = function (callback, arr = [], i = 0) {
 const new_s = s.myMap(function (item) {
   return item * 2;
 });
-console.log('Should be true [46, 130, 196, 10] >', new_s);
+console.log('Should be [46, 130, 196, 10] >', new_s);
