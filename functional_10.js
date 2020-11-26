@@ -112,14 +112,48 @@ const watchList = [
   }
 ];
 
-const getRating = (watchList) => {
-  const averageRating = undefined;;
+// const getAvgRating = (watchList) => {
+//   return watchList
+//     .filter(({ Director }) => Director === 'Christopher Nolan')
+//     .map(movie => movie.imdbRating)
+//     .reduce((sum, currentValue, _, array) => (
+//       sum + parseFloat(currentValue) / array.length
+//     ), 0);
+// };
 
+// Alt2
+// function getAvgRating(watchList) {
+//   var count = 0;
 
+//   var averageRating = watchList.reduce((sum, movie) => {
+//     if (movie.Director == "Christopher Nolan") {
+//       count += 1;
+//       return sum + parseFloat(movie.imdbRating);
+//     }
+//     return sum;
+//   }, 0) / count;
 
-  return averageRating;
+//   return averageRating;
+// }
+
+// Alt3
+function getAvgRating(watchList) {
+  return watchList.reduce((
+    { sum, count },
+    { Director: dir, imdbRating: rating },
+    idx,
+    arr) => {
+    if (dir === 'Christopher Nolan') {
+      count++;
+      sum += Number(rating);
+    }
+    return idx === arr.length - 1
+      ? sum / count
+      : { sum, count };
+  }, { sum: 0, count: 0 });
 }
-console.log(getRating(watchList));
+
+console.log('Should be 8.675 >', getAvgRating(watchList));
 
 // reduce
 const users = [
