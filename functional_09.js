@@ -17,3 +17,11 @@ const second = [4, 5];
 console.log("Should be [ 1, 2, 3, 4, 5 ] >", nonMutatingConcat(first, second));
 console.log("Original first should be [ 1, 2, 3 ] >", first);
 console.log("Original second should be [ 4, 5 ] >", second);
+
+// Add Elements to the End of an Array Using concat Instead of push
+{
+  const nonMutatingPush = (original, newItem) => original.concat(newItem);
+  const first = [1, 2, 3];
+  const second = [4, 5];
+  console.log(nonMutatingPush(first, second));
+}
