@@ -11,3 +11,9 @@ const inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
 console.log("Should be [ Chicago, Delhi, Islamabad ] >", nonMutatingSplice(inputCities));
 
 // Combine Two Arrays Using the concat Method
+const nonMutatingConcat = (original, attach) => original.concat(attach);
+const first = [1, 2, 3];
+const second = [4, 5];
+console.log("Should be [ 1, 2, 3, 4, 5 ] >", nonMutatingConcat(first, second));
+console.log("Original first should be [ 1, 2, 3 ] >", first);
+console.log("Original second should be [ 4, 5 ] >", second);
