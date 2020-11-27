@@ -9,4 +9,4 @@ const alphabeticalOrder = arr => {
         : 1;
   })
 };
-console.log('Test >', alphabeticalOrder(["a", "d", "c", "a", "z", "g"]));
+console.log('Abc order >', alphabeticalOrder(["a", "d", "c", "a", "z", "g"]));
