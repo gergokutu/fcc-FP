@@ -28,3 +28,11 @@ const nonMutatingSort = arr => [...arr].sort((a, b) => a - b);
 
 console.log('Original array >', globalArray);
 console.log('Sorted array >', nonMutatingSort(globalArray));
+
+// Split a String into an Array Using the split Method
+// Note that the words are not always separated by spaces
+// And the array should not contain punctuation.
+const splitify = str => str.split(/\W|_/);
+console.log("Should be [ 'Hello', 'World', 'I', 'am', 'code' ] >",
+  splitify("Hello_World,I-am code")
+);
