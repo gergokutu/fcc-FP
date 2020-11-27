@@ -26,3 +26,10 @@ console.log('Should be 3 >', curried(1)(2)); // Returns 3
 // You can save it into a variable
 const funcForY = curried(1);
 console.log(funcForY(2)); // Prints 3
+
+//Impartial function
+function impartial(x, y, z) {
+  return x + y + z;
+};
+const partialFn = impartial.bind(this, 1, 2);
+console.log('Should be 13 >', partialFn(10)); // Returns 13
