@@ -36,3 +36,14 @@ const splitify = str => str.split(/\W|_/);
 console.log("Should be [ 'Hello', 'World', 'I', 'am', 'code' ] >",
   splitify("Hello_World,I-am code")
 );
+
+// Combine an Array into a String Using the join Method
+// Do not use replace()
+const sentensify = str => {
+  return str
+    .split(/\W|_/)
+    .join(" ");
+};
+console.log("Should be May the force be with you >",
+  sentensify("May-the-force-be-with-you")
+);
